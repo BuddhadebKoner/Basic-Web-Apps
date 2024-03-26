@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="your-integrity-code-here" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="icons/webicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="store.css">
+    <title>BuddhaTravel</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="/index.html"><img src="/img/logo.webp" alt="logo"></a>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <a href="#" class="nav-links">Courses</a>
+                <a href="#" class="nav-links">Plan a trip</a>
+                <a href="#" class="nav-links">live chat</a>
+                <a href="#" class="nav-links" id="navIcon"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" id="navBtn">Login</button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="responsiveness">
+        <p>This website is not responsive so open in desktop</p>
+    </div>
+
+
+    <div class="loginpopup-bg">
+        <div class="loginpopup">
+            <button id="loginpageExit"><i class="fa-solid fa-xmark crossmark"></i></button>
+            <h2>Log in to my webapp</h2>
+            <div class="google-login">
+                <img src="/icons/google-icon.png" alt="google" class="googleIcon">
+                <p>continue with google</p>
+            </div>
+            <div class="gmail-login">
+                <img src="/icons/mail.png" alt="" class="googleIcon">
+                <p>continue with Email</p>
+            </div>
+            <p>Don’t have an account? <span><a href="">Sign up</a></span></p>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="cards">
+            <div class="card-image card1">
+            </div>
+            <div class="card-details">
+
+
+                <div class="card-details">
+                    <p class="card-details-heading">WHATSAPP MESSAGE</p>
+                    <p class="card-details-subhead">ONCE TIME OFFER</p>
+                    <p class="card-details-amount"><span class="overright-amount-details-sec">$ 999</span> $100
+                    </p>
+                    <span class="card-details-offer">90% Discount</span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-image card2">
+            </div>
+            <div class="card-details">
+                <p class="card-details-heading">A LONG TOUR WITH ME</p>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 39796d563dfd8197ecd67ad099360203170f8c45
+                <p class="card-details-subhead">BUDDHADEB KONER</p>
+                <p class="card-details-amount"><span class="overright-amount-details-sec">$ 1000</span> $900</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-image card3">
+            </div>
+            <div class="card-details">
+                <p class="card-details-heading">LIVE VIDEO CALL WITH ME</p>
+                <p class="card-details-subhead">Lets Explore</p>
+                <p class="card-details-amount"><span class="overright-amount-details-sec">$ 800</span> $200</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-image card4">
+            </div>
+            <div class="card-details">
+                <p class="card-details-heading">BOOK YOUR TICKET FREE !</p>
+                <p class="card-details-subhead">Early Bards Offer</p>
+                <p class="card-details-amount"><span class="overright-amount-details-sec">$ 1200</span> $800</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        let navBtn = document.querySelector('#navBtn');
+        let loginPopup = document.querySelector('.loginpopup-bg');
+        let crossmark = document.querySelector('.crossmark');
+
+        navBtn.addEventListener('click', () => {
+            loginPopup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        crossmark.addEventListener('click', () => {
+            loginPopup.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    </script>
+</body>
+
+</html>

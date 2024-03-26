@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about-me</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: fit-content;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #menu-icon {
+            position: fixed;
+            left: 1vw;
+            top: 1vw;
+            /* display: none; */
+        }
+
+        .about {
+            padding: 50px;
+            width: 100%;
+            height: fit-content;
+            line-height: 1.35;
+            padding: 00px 10vw 0 10vw;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+        }
+
+        .about p {
+            font-size: 1vw;
+        }
+
+        .about-head-div {
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #about-heading {
+            font-size: 3vw;
+            font-weight: bold;
+            /* z-index: 4;
+    color: wheat; */
+        }
+
+        .about h1 {
+            margin-top: 1.5vw;
+            font-size: 2vw;
+        }
+
+        .sub-heading-about {
+            font-weight: bold;
+            font-size: 1vw;
+        }
+
+        #about-links {
+            text-decoration: none;
+            color: rgb(12, 169, 231);
+        }
+
+        /* sidebar */
+        .sidebar {
+            display: none;
+            background-color: aqua;
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            animation: sidebarAppear 0.5s;
+        }
+
+        @keyframes sidebarAppear {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- About Section -->
+
+
+    <div class="sidebar" id="Sidebar">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eos ipsum voluptate atque sit adipisci earum itaque sunt quia fugiat, temporibus explicabo minima voluptas obcaecati esse ab exercitationem tenetur. Saepe?
+    </div>
+
+    <div class="about-head-div" id="about">
+        <span id="menu-icon"><img src="/img/menu_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+        <span id="about-heading">About</span>
+    </div>
+    <section class="about">
+
+
+        <h1> Introduction </h1>
+
+        <p>Hey there, I'm Buddhadeb Koner, a programmer and B.Tech student deeply passionate about IT. Over the past 3
+            years, I've honed my skills in programming, web development... through hands-on experiences and
+            exciting projects.
+        </p>
+
+        <h1> Professional Background </h1>
+
+        <p>Navigating the realms of B.Tech in Computer Science, I've become a digital maestro. Crafting web wonders with
+            HTML, CSS, and JavaScript, I've danced through hackathons wielding C and C++. PHP and MySQL are my allies in
+            building dynamic web landscapes. I've flirted with the avant-garde of AI and ML, brushed strokes on Figma's
+            canvas, and dabbled in Python's automation dance. Freelancing isn't just work; it's where the art of code
+            meets the symphony of design, creating a digital tapestry of brilliance. In this ever-evolving tech journey,
+            I'm not just a player; I'm composing the melody of my future.</p>
+
+        <h1>Passion and Motivation </h1>
+
+        <p>Coding isn't just a task; it's my passion. I can dive into it all day, finding joy in every line of code.
+            Beyond the screen, meeting new minds and sparking conversations in the tech community is what truly
+            energizes me. Running a YouTube channel is my way of sharing the excitement. But above all, the simple joy
+            of helping others, making their tech journey smoother, is my driving force. In this dynamic world, my
+            passion and the motivation to assist are the sparks that keep my tech flame alive.</p>
+
+        <h1> Skills and Expertise </h1>
+
+        <p>
+            <span class="sub-heading-about">Programming:</span>
+            Proficient in web application development.
+            Skilled in languages such as HTML, CSS, JavaScript, and potentially more depending on your stack.
+            <span class="sub-heading-about">Web Design:</span>
+            Experienced in creating thumbnails and banners for YouTube channels using tools like Photoshop, Figma, and
+            Canva.
+            <span class="sub-heading-about">Digital Marketing:</span>
+            Knowledgeable in algorithms for crafting effective titles, descriptions, and thumbnails to optimize
+            click-through rates.
+            Understands audience engagement strategies to grow and maintain viewership.
+            <span class="sub-heading-about">YouTube Expertise:</span>
+            Extensive experience with YouTube, dating back to your high school years.
+            In-depth understanding of YouTube algorithms, SEO, and content optimization.
+            <span class="sub-heading-about"> Public Speaking:</span>
+            Proficient in public speaking, a valuable skill for creating engaging video content and connecting with your
+            audience.
+            <span class="sub-heading-about">Content Creation:</span>
+            Demonstrated ability to create and publish content consistently on YouTube.
+            <span class="sub-heading-about">Audience Engagement:</span>
+            Skilled in strategies to attract and retain viewers, fostering a sense of community.
+            <span class="sub-heading-about">Multimedia Tools:</span>
+            Competent in using various multimedia tools for content creation and editing.
+        </p>
+
+        <h1>Education </h1>
+
+        <p>
+            <span class="sub-heading-about">Current Education:<br></span>
+            Pursuing B.Tech in Computer Science and Engineering (CSE) from <a id="about-links"
+                href="https://icampus.setgoi.ac.in/" target="_blank">Sanaka Educational Trust</a>.
+            <span class="sub-heading-about"><br>Previous Education:<br></span>
+            High School (HS): Eral Anchal High School<br>
+            Obtained 80% marks.<br>
+            Madhyamik (10th Standard): Eral Anchal High School<br>
+            Achieved a score of 80.85%. <br>
+
+        </p>
+
+    </section>
+
+    <script>
+        const sidebar = document.getElementById('Sidebar');
+        const icon = document.getElementById('menu-icon');
+
+        icon.addEventListener('click', function () {
+
+            if(sidebar.style.display === 'none' || sidebar.style.display === ''){
+                sidebar.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }else{
+                sidebar.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+
+</html>

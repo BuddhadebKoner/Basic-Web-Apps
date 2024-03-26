@@ -1,0 +1,1072 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('fonts/LeagueSpartan-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/PlayfairDisplay-VariableFont_wght.woff2') format('woff2');
+}
+
+/*All fonts that i used in web*/
+
+/* Salsa
+Roboto
+League Spartan
+Playfair Display */
+
+:root {
+    --main-color: #45B748;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    /* background-color: #ff0000; */
+}
+
+footer {
+    width: 100%;
+    height: 20rem;
+    background-color: #00ff51;
+    display: none;
+}
+
+/*upper heading part*/
+
+.upperHead {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--main-color);
+    font-family: 'League Spartan';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem 0 3rem;
+}
+
+.leftUpperHead {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+
+.leftUpperHead>a {
+    color: white;
+    margin-right: 30px;
+}
+
+.rightUpperHead {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.rightUpperHead>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* font-size: 20px; */
+    margin-left: 20px;
+}
+
+.rightUpperHead>a>span {
+    margin-right: 10px;
+}
+
+/*lower heading section */
+
+.lowerHead {
+    width: 100%;
+    height: 4.5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'League Spartan', sans-serif;
+    padding: 0 0rem 0 3rem;
+    font-size: 1.1rem;
+}
+
+.leftLowerHead,
+.rightLowerHead {
+    width: fit-content;
+    height: 3rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.leftLowerHead {
+    justify-content: flex-start;
+}
+
+.rightLowerHead {
+    justify-content: flex-end;
+}
+
+.leftLowerHead>a,
+.rightLowerHead>a {
+    margin-right: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+#searchBtn {
+    all: unset;
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.4s ease-in-out;
+    border: 1px solid transparent;
+}
+
+#searchBtn:hover {
+    transform: scale(1.1);
+    border: 2px solid #ddd;
+}
+
+.search-container .search-input {
+    display: none;
+}
+
+.search-input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+    font-size: 16px;
+    transition: 4s ease-in-out;
+}
+
+#webLogo {
+    height: 4rem;
+}
+
+#addToCartBtn {
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    color: black;
+    align-items: center;
+    background-color: #FDB916;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#addToCartBtn:hover {
+    background-color: white;
+    border: 1px solid black;
+}
+
+#Login {
+    margin: 0;
+}
+
+#devidedLine {
+    margin: 0 10px 0 10px;
+}
+
+/*main starts from here */
+
+main {
+    width: 100%;
+    height: 750vh;
+    background-color: transparent;
+}
+
+/*banner swiper js code*/
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    user-select: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+    opacity: 0.8;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headingText {
+    width: fit-content;
+    height: fit-content;
+    background: none;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.headingText h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffff;
+    text-shadow: 0px 0px 3px #ffffff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.headingText h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+    color: #ffff;
+    text-shadow: 0px 0px 3px #ffffff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.oderbtn {
+    width: 16rem;
+    height: 4rem;
+    padding: 20px 30px 20px 30px;
+    user-select: none;
+    background-color: transparent;
+    border: 1.5px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background-color .4s ease-in-out;
+}
+
+.headingText a {
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'League Spartan';
+}
+
+.oderbtn:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+/*yeahha se sruru ho raha ha about*/
+
+.Aboutus {
+    width: 100%;
+    height: 50rem;
+    background-color: #fff;
+}
+
+.aboutHeading {
+    width: 100%;
+    height: 37.5%;
+    font-size: 3rem;
+    padding: 5rem 5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'League Spartan';
+    background-color: transparent;
+    pointer-events: none;
+    user-select: none;
+}
+
+.aboutimage {
+    width: 100%;
+    height: 37.5%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.AboutimageBox {
+    width: 100%;
+    height: fit-content;
+    padding: 0 10rem 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    pointer-events: none;
+    user-select: none;
+}
+
+.AboutimageBox>img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+.aboutimageText {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10rem 0 10rem;
+    justify-content: space-between;
+
+}
+
+.aboutimageText>p {
+    width: 150px;
+    height: fit-content;
+    margin: 0 30px 0 30px;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.aboutBtn {
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutBtn a {
+    width: 200px;
+    height: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5px;
+    font-size: 27px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+#aboutBtnLink {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+#aboutBtnLink:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.specialFood {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.SpecialFoodBg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.specialfoodHeading {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #00000061;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+}
+
+.specialfoodHeading h1 {
+    font-size: 4rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.specialfoodHeading h3 {
+    margin-top: 10px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: #ffff;
+    text-shadow: 0px 0px 3px #ffffff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.orderbtnSpecialfood a {
+    color: white;
+    font-family: 'League Spartan';
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/*foodproducts */
+
+.foodproducts {
+    width: 100%;
+    height: 100rem;
+    background-color: white;
+}
+
+.foodproductshead {
+    width: 100%;
+    height: 20rem;
+    background-color: transparent;
+    padding: 0 20rem 0 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.foodproductshead h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.foodproductshead p {
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.productsDivs {
+    width: 100%;
+    height: 25rem;
+    background-color: transparent;
+    padding: 10px 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.itemimages {
+    width: 30rem;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AllFoodItemImas {
+    background-size: cover;
+    width: 30rem;
+}
+
+.itemsPrices {
+    width: 40%;
+    height: 320px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.itemsPricesOptions {
+    width: 100%;
+    height: 106px;
+}
+
+.itemPriceHead {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.itemPriceHead>h3 {
+    font-family: 'League Spartan';
+    font-weight: 390;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.selectItems {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectItems input {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+}
+
+.iteselectbox {
+    width: 500px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid rgb(209, 209, 209);
+    font-family: 'League Spartan';
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iteselectbox hr {
+    height: 30px;
+    background-color: rgb(147, 147, 147);
+    border: none;
+    border-radius: 10px;
+    width: 2px;
+    margin-right: 15px;
+}
+
+.dropdownIconHr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebebeb;
+    width: 500px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.ItemAddToCart {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AddToCartBtn {
+    width: 200px;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddToCartBtn a {
+    width: 200px;
+    height: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.ItemAddToCart p {
+    color: #8d8d8d;
+}
+
+.viewAllItems {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vewallprocucts {
+    width: 300px;
+    height: 45px;
+    background-color: transparent;
+    color: var(--main-color);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color);
+}
+
+.fermtofamilyandchef {
+    margin-top: 5rem;
+    width: 100%;
+    height: 40rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.firsimage-container,
+.secoundimage-container {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.firsimage-container img,
+.secoundimage-container img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+
+.firsimage-container img,
+.secoundimage-container img {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+}
+
+.firsimage-container:hover img,
+.secoundimage-container:hover img{
+    transform: scale(1);
+}
+
+
+.serviceSections {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Lern-more {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#LernMore {
+    width: 300px;
+    height: 45px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.serviceSections>p {
+    font-family: 'League Spartan';
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: 10px;
+
+}
+
+.serviceSections p:first-child {
+    font-weight: 600;
+    font-family: 'Salsa';
+}
+
+.howToOrder {
+    width: 100%;
+    height: fit-content;
+    padding: 10rem;
+    background-color: transparent;
+}
+
+.howToOrderHead {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'League Spartan';
+    padding: 0 10rem;
+}
+
+.howToOrderHead h1 {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.howToOrderHead p {
+    margin: 30px 0;
+    font-size: 1.4rem;
+}
+
+.howtoorderImages {
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.dekiveryprocess {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1.5px solid #FDB916;
+    background-color: transparent;
+    font-family: 'League Spartan';
+    padding: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dekiveryprocess h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--main-color);
+}
+
+.dekiveryprocess p {
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.dekiveryprocess>img {
+    width: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #FDB916;
+}
+
+.testimonials {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    padding: 0 5rem;
+}
+
+.testimonialHeadings {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'League Spartan';
+}
+
+.testimonialHeadings h1 {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.TestimonialSubhead {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.TestimonialHasTags {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.testimonialbox {
+    width: 100%;
+    height: 50rem;
+    background-color: transparent;
+}
+
+.testimonialMedia,
+.testimonialsTexts {
+    width: 100%;
+    height: 50%;
+    font-family: 'League Spartan';
+    background-color: transparent;
+    position: relative;
+}
+
+.testimonialMedia,
+.testimonialsTexts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonialsTexts>a {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.testimonialMedia>a {
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    margin: 3px;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.testimonialMediaImages {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonialMediaImages:hover {
+    transform: scale(1);
+}
+
+.testimonialMediaIcons {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.testimonialMediaIcons1 {
+    top: 10px;
+    left: 10px;
+}
+
+.testimonialMediaIcons2 {
+    top: 10px;
+    left: 382px;
+    color: white;
+}
+.testimonialMediaIcons3 {
+    top: 10px;
+    left: 754px;
+    color: white;
+}
+.testimonialMediaIcons4 {
+    top: 10px;
+    left: 1126px;
+}
+.testimonialMediaIconsImgtag {
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.testimonialsTexts a:nth-of-type(1) {
+    background-color: black;
+    margin-top: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonialsTexts a:nth-of-type(2) {
+    background-color: #FDB916;
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.TESPadding{
+    margin-top: 60px;
+}
+.TESPadding p{
+    font-size: 1.1rem;
+}
+
+.viewmore{
+    margin-top: 100px;
+}
+
+/* for footer section */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(241, 241, 241);
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-family: 'League Spartan';
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.footer-section >ul li{
+    margin-bottom: 10px;
+}
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+}
+.about img{
+    width: 100px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: transparent; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a:hover {
+    color: #8f8f8f;
+}

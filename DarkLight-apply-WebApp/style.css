@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* all color palate variables--*/
+:root {
+    --Black: #000000;
+    --White: #ffffff;
+
+    --header-bg: #1F2937;
+    --header-btn-dark: #7E22CE;
+    --header-btn-light: #C9A9EE;
+
+    --banner-bg: #101827;
+    --banner-text: #909CA9;
+    --banner-highlight: #9334E9;
+
+    --bright-text: #7E22CE;
+    --button-hover: #D1D5DB;
+
+    --recomendation-bg: #101827;
+    --cards-color: #1E293B;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*here the heading styles*/
+
+
+/* hover animation of links starts from here */
+/* nav-links-tag */
+
+/* Link styles */
+.nav-links-tag {
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Lift effect on hover */
+.nav-links-tag:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.nav-links-tag:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    top: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s;
+}
+
+/* Expand underline on hover */
+.nav-links-tag:hover::after,
+.nav-links-tag:hover::before {
+    transform: scaleX(1);
+}
+
+/* Lift effect on hover */
+.nav-links-tag:hover {
+    transform: translate(0, -5px);
+}
+
+/* this is a hover animation */
+
+.heading-content {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    padding: 0 3vw 0 3vw;
+    z-index: 3;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /*temputary color*/
+    /* background-color: #9334E9; */
+}
+
+.nav-links-tag {
+    text-decoration: none;
+    /*temputary color*/
+    color: var(--White);
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid var(--banner-highlight);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.logo:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*end*/
+
+.navs-link {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.nav-links-tag {
+    margin: 10px;
+}
+
+
+
+/* button for the dark and light mode */
+.toggle-switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch label:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(img/moon.webp);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, );
+    transition: transform 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked+label {
+    background-color: Black;
+}
+
+.toggle-switch input[type="checkbox"]:checked+label:before {
+    transform: translateX(26px);
+    background-image: url(img/sun.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+/*upper part is for the dark and light mode */
+
+
+/* for the main body start from here  */
+main {
+    position: absolute;
+    top: 100px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+/* the baner portion is from here  */
+.banner {
+    position: fixed;
+    width: 100%;
+    height: 51vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*this is a animation of text delete and appear automaticly --*/
+
+#text-anime {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--White);
+    font-size: 40px;
+    /* position: fixed; */
+    left: 5vw;
+}
+
+/* recomendation box */
+.recomendation {
+    width: 100%;
+    height: fit-content;
+    /* background-color: var(--recomendation-bg-light); */
+    z-index: 2;
+    position: relative;
+    top: 50vh;
+    padding: 20px 4em 0 4em;
+    text-align: center;
+}
+
+.heading-rec {
+    width: 100%;
+    height: fit-content;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+/* cover section */
+.cover-image-box {
+    width: 600px;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+#dark-img,
+#light-img {
+    width: 800px;
+    height: 100%;
+    opacity: 1;
+    display: none;
+    /* z-index: -1; */
+}
+
+#dark-img {
+    mix-blend-mode: screen;
+}
+
+#light-img {
+    mix-blend-mode: multiply;
+}
+
+/*here the content that have in the banner section..*/
+.animation-text {
+    width: fit-content;
+    height: fit-content;
+    height: fit-content;
+    font-size: 20px;
+}
+
+.cover-content {
+    width: 800px;
+    background-color: transparent;
+    padding: 50px;
+}
+
+#details-text {
+    color: var(--banner-text);
+    width: 800px;
+    position: fixed;
+    top: 250px;
+}
+
+/*button style in css*/
+#banner-btns {
+    position: static;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Styles for the button */
+.square-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--White);
+    color: var(--Black);
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.square-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Optional: Add additional styles for a more aesthetic look */
+.square-button:active {
+    background-color: var(--header-btn-dark);
+    color: var(--White);
+    transform: translateY(2px);
+}
+
+/* Optional: Add box shadow for depth */
+.square-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*this is for the card in the recomendation -- */
+
+.cards-sections {
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    flex: 1;
+}
+
+.card {
+    position: relative;
+    width: 384px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin: 1vw;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-thumbnail {
+    width: 100%;
+    height: 216px;
+    overflow: hidden;
+}
+
+.thumbnail-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 20px;
+    height: 208px;
+}
+
+.cards-title{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 10px 0 0;
+    color: var(--banner-text);
+}
+
+
+/*footer content starts from here */
+
+.footer{
+    width: 100%;
+    height: 100vh;
+    background-color: #007bff;
+}
+
+/* 1452px */
+@media (max-width: 1452px) {
+
+    #dark-img,
+    #light-img {
+        opacity: 0.1;
+        display: none;
+        z-index: -1;
+    }
+}
+
+/* 1334px */
+@media (max-width: 1334px) {
+    #dark-img,
+    #light-img {
+        opacity: 0.1;
+        display: none;
+        z-index: -1;
+    }
+
+   
+    .card {
+       margin: 10px;
+    }
+
+    .recomendation {
+        height: fit-content;
+        padding: 5rem;
+    }
+}
+
+
+/* 881px */
+@media (max-width: 881px) {
+    .navs-link {
+        display: none;
+    }
+
+    #details-text {
+        width: 85vw;
+        top: 200px;
+    }
+}
+
+/*748p*/
+@media (max-width: 748px) {
+    #text-anime {
+        font-size: 5.4vw;
+    }
+    .banner {
+        height: 50em;
+    }
+    #details-text {
+        font-size: 2.9vw;
+    }
+    .cards-title{
+        font-size: 1.1rem;
+    }
+    #banner-btns{
+        margin-top: 0px;
+    }
+    .recomendation{
+        top: 50vh;
+        padding: 10px;
+    }
+    
+}
+
+/*373px*/
+
+@media (max-width: 389px) {
+    .square-button{
+        font-size: 11px;
+    }
+    .card{
+        width: 300px;
+    }
+    .cover-content{
+        padding: 30px;
+    }
+    .logo{
+        font-size: 1.0rem;
+    }
+   
+}
