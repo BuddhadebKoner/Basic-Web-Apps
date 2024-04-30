@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 20px;
+        }
+
+        #nameDisplay {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #nameInput {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        #editBtn,
+        #saveBtn {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="nameDisplay">John Doe</div>
+        <input type="text" id="nameInput" style="display: none;">
+        <button id="editBtn">Edit</button>
+        <button id="saveBtn" style="display: none;">Save</button>
+    </div>
+</body>
+
+<script>
+    document.getElementById('editBtn').addEventListener('click', function () {
+        document.getElementById('nameDisplay').style.display = 'none';
+        document.getElementById('nameInput').style.display = 'block';
+        document.getElementById('saveBtn').style.display = 'inline-block';
+    });
+
+    document.getElementById('saveBtn').addEventListener('click', function () {
+        var newName = document.getElementById('nameInput').value;
+        document.getElementById('nameDisplay').textContent = newName;
+        document.getElementById('nameDisplay').style.display = 'block';
+        document.getElementById('nameInput').style.display = 'none';
+        document.getElementById('saveBtn').style.display = 'none';
+    });
+
+</script>
+
+</html>
