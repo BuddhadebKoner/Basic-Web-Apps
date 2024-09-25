@@ -1,5 +1,3 @@
-Here's the rewritten table with all rows added:
-
 # Basic-Web-Apps
 
 Welcome to our global repository! Below is an overview of the folders contained within:
